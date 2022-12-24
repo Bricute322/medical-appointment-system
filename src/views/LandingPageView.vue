@@ -2,9 +2,9 @@
   <LandingPage />
 </template>
 <script>
-import LandingPage from "@/components/LandingPage.vue";
+import LandingPage from "../components/LandingPage.vue";
 export default {
-  name: "LandingPage",
+  name: "LandingPageView",
   data: () => ({}),
   components: { LandingPage },
 };

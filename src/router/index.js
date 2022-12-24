@@ -24,6 +24,11 @@ const routes = [
     name: "LandingPage",
     component: () => import("@/components/Layout/Navigation.vue"),
   },
+  {
+    path: "/MainTest",
+    name: "MainTest",
+    component: () => import("../views/LandingPageView.vue"),
+  },
 ];
 
 const router = new VueRouter({
