@@ -8,12 +8,15 @@
     <v-spacer></v-spacer>
     <v-toolbar-items
       v-for="navigationItems in navigationItems"
-      :key="navigationItems.text"
+      :key="navigationItems.id"
     >
-      <v-list-item-title>{{ navigationItems.text }}</v-list-item-title>
+      <v-list-item-title
+        v-for="navigationItems in navigationItems"
+        :key="navigationItems.id"
+      ></v-list-item-title>
     </v-toolbar-items>
     <v-spacer></v-spacer>
-    <v-toolbar-items>
+    <!-- <v-toolbar-items>
       <v-btn icon>
         <v-icon>mdi-bell-outline</v-icon>
       </v-btn>
@@ -23,23 +26,8 @@
       <v-btn icon>
         <v-icon>mdi-account-outline</v-icon>
       </v-btn></v-toolbar-items
-    >
+    > -->
   </v-toolbar>
-  <!-- <v-card elevation="12" width="256">
-    <v-navigation-drawer floating permanent>
-      <v-list dense rounded>
-        <v-list-item v-for="item in items" :key="item.title" link>
-          <v-list-item-icon>
-            <v-icon>{{ item.icon }}</v-icon>
-          </v-list-item-icon>
-
-          <v-list-item-content>
-            <v-list-item-title>{{ item.title }}</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-      </v-list>
-    </v-navigation-drawer>
-  </v-card> -->
 </template>
 <script>
 export default {
@@ -47,10 +35,10 @@ export default {
   data: () => ({
     logO: require("@/assets/logo3.png"),
     navigationItems: [
-      { text: "Home", url: "/Landingpage" },
-      { text: "About US" },
-      { text: "Services" },
-      { text: "Location" },
+      { id: 1, test: "Home", path: "login" },
+      { id: 2, text: "About US" },
+      { id: 3, text: "Services" },
+      { id: 4, text: "Location" },
     ],
     items: [
       { title: "Home", icon: "mdi-view-dashboard" },
@@ -65,8 +53,6 @@ export default {
 <style scoped>
 .flex-grow-0 {
   background-image: linear-gradient(to right, #8aa4ff 10%, #fa94ff, #f04bea);
+  z-index: 99;
 }
-/* .test {
-  height: 100px !important;
-} */
 </style>

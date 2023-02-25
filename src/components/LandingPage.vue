@@ -111,8 +111,8 @@
 import Navigation from "../components/Layout/Navigation.vue";
 export default {
   name: "LandingPage",
-  data: () => ({ bio: "" }),
   components: { Navigation },
+  data: () => ({ bio: "" }),
 };
 </script>
 <style scoped>

@@ -12,9 +12,9 @@
           outlined
         >
           <!-- <v-alert dense outlined type="error"> </v-alert> -->
-          {{ $store.state.errors.username }}
+          <!-- {{ $store.state.errors.username }}
           {{ $store.state.errors.password }}
-          {{ $store.state.errors.phone_number }}
+          {{ $store.state.errors.phone_number }} -->
 
           <v-card class="d-flex justify center" flat width="500px">
             <v-form ref="registerForm" @submit.prevent="submit">
