@@ -10,7 +10,6 @@
           flat
         >
           {{ $store.state.logForm }}
-          {{ VUE_APP_API_ENDPOINT }}
           <v-form ref="loginForm" @submit.prevent="submit">
             <v-row>
               <v-img
@@ -99,7 +98,6 @@ export default {
         return pattern.test(value) || "Invalid e-mail.";
       },
     },
-    VUE_APP_API_ENDPOINT: process.env.VUE_APP_API_ENDPOINT,
   }),
   methods: {
     submit() {
