@@ -1,5 +1,6 @@
 import Vue from "vue";
 import Vuex from "vuex";
+const apiUrl = process.env.VUE_APP_API_ENDPOINT;
 
 Vue.use(Vuex);
 
@@ -20,7 +21,7 @@ export default new Vuex.Store({
   actions: {
     registerForm({ commit }, payload) {
       Vue.prototype.$axios
-        .post(`http://reaper25.pythonanywhere.com/register/`, payload)
+        .post(`${process.env.VUE_APP_API_ENDPOINT}/register/`, payload)
         .then((shesh) => {
           console.log("Im Here", shesh.data);
           commit("REGISTER_TESTING");
@@ -28,7 +29,7 @@ export default new Vuex.Store({
     },
     loginForm({ commit }, logForm) {
       Vue.prototype.$axios
-        .post(`http://reaper25.pythonanywhere.com/login/`, logForm)
+        .post(`${process.env.VUE_APP_API_ENDPOINT}/login/`, logForm)
         .then((logs) => {
           console.log("Success", logs.data);
           commit("LOGIN_FORM");
