@@ -9,7 +9,7 @@
           tile
           flat
         >
-          {{ $store.state.logForm }}
+          {{ $store.state.errors }}
           <v-form ref="loginForm" @submit.prevent="submit">
             <v-row>
               <v-img
@@ -20,6 +20,7 @@
                 v-bind:src="logO"
               ></v-img>
             </v-row>
+            {{ $store.state.login }}
             <v-text-field
               class="px-12 py-1"
               required
